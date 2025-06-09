@@ -35,11 +35,13 @@ function useInputState(
     {
       name: 'value',
       type: 'string',
+      required: false,
       description: 'The current state value.',
     },
     {
       name: 'onChange',
       type: 'ChangeEventHandler<HTMLInputElement>',
+      required: false,
       description: 'A function to update the state.',
     },
   ]"
