@@ -27,8 +27,7 @@ function useNetworkStatus(): NetworkStatus;
 
 ## Example
 
-````tsx
-```tsxp
+```tsx
 function AdaptiveImage() {
   const { effectiveType, saveData } = useNetworkStatus();
 
@@ -42,8 +41,4 @@ function AdaptiveImage() {
     />
   );
 }
-````
-
-```
-
 ```

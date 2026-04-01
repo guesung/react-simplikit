@@ -25,7 +25,6 @@ function useScrollDirection(): void;
 
 ## Example
 
-````tsx
 ```tsx
 function Header() {
   const { direction, position } = useScrollDirection();
@@ -39,8 +38,4 @@ function Header() {
     </header>
   );
 }
-````
-
-```
-
 ```
