@@ -1,6 +1,7 @@
 // Simplified version of https://github.com/toss/es-toolkit/blob/main/src/function/debounce.ts
 
-export type DebouncedFunction<F extends (...args: unknown[]) => void> = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- generic function constraint requires `any[]` due to parameter contravariance
+export type DebouncedFunction<F extends (...args: any[]) => void> = {
   (...args: Parameters<F>): void;
   cancel: () => void;
 };
@@ -16,7 +17,8 @@ type DebounceOptions = {
   edges?: Array<'leading' | 'trailing'>;
 };
 
-export function debounce<F extends (...args: unknown[]) => void>(
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- generic function constraint requires `any[]` due to parameter contravariance
+export function debounce<F extends (...args: any[]) => void>(
   func: F,
   debounceMs: number,
   { edges = ['leading', 'trailing'] }: DebounceOptions = {}
