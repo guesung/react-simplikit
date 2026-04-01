@@ -204,9 +204,9 @@ describe('useStorageState', () => {
     });
 
     it('should work with custom serializer and deserializer', async () => {
-      const serializer = (value: any) =>
+      const serializer = (value: string) =>
         ['string', 'number', 'boolean'].includes(typeof value) ? value : JSON.stringify(value);
-      const deserializer = (value: any) =>
+      const deserializer = (value: string) =>
         /^(\d+)|(true|false)|([^[].*)|([^{].*)$/.test(value) ? value : JSON.parse(value);
 
       const { result } = await renderHookSSR(() => useStorageState('test-key', { storage, serializer, deserializer }));
