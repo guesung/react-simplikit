@@ -38,6 +38,6 @@ function usePrevious<T>(
 
 ```tsx
 const [count, setCount] = useState(0);
-// previousCount의 초기 값은 `0`이예요
+// previousCount의 초기 값은 `0`이에요
 const previousCount = usePrevious(count);
 ```
