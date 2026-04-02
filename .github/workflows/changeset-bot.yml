@@ -11,4 +11,4 @@ jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: changesets/bot@v1
+      - uses: changesets/bot@main
